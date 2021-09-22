@@ -34,8 +34,8 @@ dataset =  'daily-summaries';
 station = 'USW00014755'; % Mt. Washington station ID
 % For more information on this weather station:
 % https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00014755/detail
-startDate = char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd')-15);
-endDate =   char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd')+15);
+startDate = char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd'));
+endDate =   char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd')+N);
 dataTypes = 'TMAX,TMIN,AWND';
 format =    'csv'; 
 base = 'https://www.ncei.noaa.gov/access/services/data/v1?dataset=';
