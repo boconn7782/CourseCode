@@ -49,7 +49,7 @@ Data = webread(call);
 % Break the data into usable arrays
 DT = Data.('DATE'); 
 % Wind provided in 10ths of meters per second
-WD = (Data.('AWND')*.1); % Converted to MPS
+WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
 % Temperature provided 10ths of degrees C
 LT = (Data.('TMIN')*.1); % Converted to deg C
 HT = (Data.('TMAX')*.1); % Converted to deg C
