@@ -1,7 +1,7 @@
 % MATLAB Lab #1 Part 2 Support
 % B.O'Connell
 % 2021-09-15
-% Weather Downloader 
+% Weather Data Downloader 
 % This program will provide N days of weather data
 % from a NOAA weather station, specifically the 
 % Mt. Washington weather station based on a 
