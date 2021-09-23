@@ -37,7 +37,7 @@ station = 'USW00014755'; % Mt. Washington station ID
 % https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00014755/detail
 startDate = char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd'));
 endDate =   char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd')+(N-1));
-dataTypes = 'TMAX,TMIN,AWND,FMTM,TAVG';
+dataTypes = 'TMAX,TMIN,AWND';
 format =    'csv'; 
 base = 'https://www.ncei.noaa.gov/access/services/data/v1?dataset=';
 call = strcat(base,dataset,'&dataTypes=',dataTypes,...
@@ -53,10 +53,9 @@ WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
 % Temperature provided 10ths of degrees C
 LT = (Data.('TMIN')*.1); % Converted to deg C
 HT = (Data.('TMAX')*.1); % Converted to deg C
-TA = (Data.('TAVG')*.1); % Converted to deg C
 
 % plot data (poorly)
-plot(DT, WD, DT, LT, DT, HT, DT, TA);
+plot(DT, WD, DT, LT, DT, HT);
 legend('Winds','Low','High');
 
 
