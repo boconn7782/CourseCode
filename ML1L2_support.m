@@ -11,7 +11,11 @@ clear;  % Clears the command window
 clc;    % Clears the workspace
 close;  % Closes any figures
 
-% Give user information about the program
+<Connect with GHCN and download raw data
+<Break out the data you need>
+<Have an array of wind speeds, low temperatures, and high temperatures>
+
+% Introduction telling the user what the script does and what to do
 fprintf(...
     ['This program will provide weather data from\n'...
     ,'a NOAA weather station based on a user inputted\n'...
@@ -24,10 +28,11 @@ fprintf(...
 % of text to the command window and splitting it 
 % across multiple lines.
 
-% Ask for start date for the weather data
+% User inputs for the date and number of days of data
 D = input('Enter a date: ','s');
 N = input('Enter number of days: ');
 
+% Connect with GHCN and download raw data
 % Prepare and format all information as required to use
 % the GHCN (Global Historical Climatology Network)
 % https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt
@@ -46,7 +51,7 @@ call = strcat(base,dataset,'&dataTypes=',dataTypes,...
 % Make a request of the GHCN and store the returned data
 Data = webread(call);
 
-% Break the data into usable arrays
+% Break out the data needed: wind speeds, low temperatures, and high temperatures
 DT = Data.('DATE'); 
 % Wind provided in 10ths of meters per second
 WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
