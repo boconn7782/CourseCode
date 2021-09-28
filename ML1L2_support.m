@@ -59,7 +59,8 @@ Data = webread(call);
 
 
 
-% Break out the data needed: wind speeds, low temperatures, and high temperatures
+% Break out the data needed: 
+% Dates(DT), wind speeds(WD), low temperatures(LT), and high temperatures(HT)
 DT = Data.('DATE'); 
 % Wind provided in 10ths of meters per second
 WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
