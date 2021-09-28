@@ -11,9 +11,8 @@ clear;  % Clears the command window
 clc;    % Clears the workspace
 close;  % Closes any figures
 
-<Connect with GHCN and download raw data
-<Break out the data you need>
-<Have an array of wind speeds, low temperatures, and high temperatures>
+
+
 
 % Introduction telling the user what the script does and what to do
 fprintf(...
@@ -28,9 +27,15 @@ fprintf(...
 % of text to the command window and splitting it 
 % across multiple lines.
 
+
+
+
 % User inputs for the date and number of days of data
 D = input('Enter a date: ','s');
 N = input('Enter number of days: ');
+
+
+
 
 % Connect with GHCN and download raw data
 % Prepare and format all information as required to use
@@ -51,6 +56,9 @@ call = strcat(base,dataset,'&dataTypes=',dataTypes,...
 % Make a request of the GHCN and store the returned data
 Data = webread(call);
 
+
+
+
 % Break out the data needed: wind speeds, low temperatures, and high temperatures
 DT = Data.('DATE'); 
 % Wind provided in 10ths of meters per second
@@ -58,6 +66,9 @@ WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
 % Temperature provided 10ths of degrees C
 LT = (Data.('TMIN')*.1); % Converted to deg C
 HT = (Data.('TMAX')*.1); % Converted to deg C
+
+
+
 
 % plot data (poorly)
 plot(DT, WD, DT, LT, DT, HT);
