@@ -14,8 +14,8 @@ B = load('BridgeData.txt');
 
 
 % eliminate extraneous noise
-X=.05*length(B); % ID 5% of size of dataset, use for window
-B(:,3)=smoothdata(B(:,2),'gaussian',X);
+[R,C]=size(B); % Get size of dataset, use 5% for window
+B(:,3)=smoothdata(B(:,2),'gaussian',.05*R);
 % plot(B(:,1),B(:,2),B(:,1),B(:,3)); %Plots raw and smooth data
 
 
