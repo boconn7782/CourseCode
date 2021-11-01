@@ -22,9 +22,9 @@ void setup() {                  // the setup() method is executed only once
 
 void loop() {                   // the loop() method is repeated
 	// The Blink Example
-  digitalWrite(led, HIGH);      // switching on the led 
+  digitalWrite(ledPin, HIGH);      // switching on the led 
   delay(1000);                  // stopping the program for 1000 milliseconds
-  digitalWrite(led, LOW);       // switching off the led 
+  digitalWrite(ledPin, LOW);       // switching off the led 
   delay(1000);                  // stopping the program for 1000 milliseconds
 
   // The Button Example
