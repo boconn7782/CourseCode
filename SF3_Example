@@ -23,6 +23,7 @@ void setup() {
 }
 
 void loop() {             
+  /* This example is purposely commented out
   // The Blink Example
   // switching on the led 
   digitalWrite(led1Pin, HIGH);
@@ -31,12 +32,12 @@ void loop() {
   // switching off the led 
   digitalWrite(led1Pin, LOW);
   // stopping the program for 1000 milliseconds
-  delay(1000); 
+  delay(1000); */
 
   // The Button Example
   // check if the pushbutton is pressed.
   buttonState = digitalRead(buttonPin);
-  // if it is, the buttonState is HIGH:
+  // if it is, the buttonState is LOW:
   if (buttonState == LOW) {     
     // turn LED on:    
     digitalWrite(led2Pin, HIGH);  
