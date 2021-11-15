@@ -1,0 +1,33 @@
+#include <iostream>  //needed for normal cin & cout
+#include <fstream>   //needed to read or write files on disk
+// #include <string>   // needed to use strings
+
+using namespace std;
+int main() {
+    char x[10];         //To store file information in 10 character chunks
+    // string IFName, OFName;
+    ifstream infile;    //setup input stream variable
+    ofstream outfile;   //setup output stream variable
+    // cout << "Enter filename for the output file (include .txt) : " << endl;
+    // cin >> InfileName;
+    // cout << "Enter filename for the output file (include .txt) : " << endl;
+    // cin >> OutfileName;
+    infile.open("testing123.txt",ios::in);    //open the input file
+    outfile.open("testing567.txt",ios::out);  //open the output file
+
+    if (!infile) //did input file open OK?
+    {
+        cout << "Unable to open file" << endl;
+        cout << "Program to force exit...\n";
+        return(1);
+    }
+    
+    while (!infile.eof()) {   //This waits for the entire file to be read before moving on.
+        infile >> x;          // Take in the data from the test file
+        cout << x << endl;    // Write the value to the console (Note how it comes out)
+        outfile << x << endl; // write the value to output file
+    }
+    outfile.close();		//close output file
+    infile.close();		//close input file
+    return(0);
+}
