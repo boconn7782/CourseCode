@@ -5,7 +5,7 @@
 using namespace std;
 int main() {
     char x[10];         //To store file information in 10 character chunks
-    // string IFName, OFName;
+    // string InfileName, OutfileName;
     ifstream infile;    //setup input stream variable
     ofstream outfile;   //setup output stream variable
     // cout << "Enter filename for the output file (include .txt) : " << endl;
