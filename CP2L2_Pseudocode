@@ -1,0 +1,45 @@
+/* C++ Lab #2 - Lesson Part 2
+ * Character Sorter
+ * < First Initial>.<Last Name> <Date>
+ * Takes in a text file and loads its contents
+ * into an array then sorts the array by ASCII value.
+ */
+
+// -- Libraries & Directives --
+#include <iostream> // Needed for normal cin & cout
+#include <fstream> // Needed to read or write files on disk
+using namespace std;
+
+int main() {
+  // -- Declare Variables --
+  // An input stream object for the text file data
+  // An oversized array for the text characters
+  // Keep track of number of characters
+
+  // -- Main Program --
+  //  Introduce Program to user
+  cout << "  --- Character Sorter ---  " << endl;
+  cout << " Loads a text file and then sorts " << endl;
+  cout << " sorts its characters by ASCII value.  " << endl << endl;
+
+  // Open text file as an input stream
+
+  // Check the file stream
+  // IF file stream not valid
+    // Provide user warning
+    // end program with error
+  // ENDIF
+
+  // Stream file content into an array
+  // FOR each element in array
+  // load character from file stream into array element
+  // Print array element to console
+  // ENDFOR
+
+  // Sort array data using a common sorting method
+
+  // Print sorted array
+  // FOR each element in array
+  // Print array element to console
+  // ENDFOR
+} // ENDPROGRAM
