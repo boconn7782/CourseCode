@@ -6,38 +6,50 @@
  * the console and records it in a file.
  */
 
-#include <iostream>
+// -- Libraries & Directives --
+#include <iostream> // For Console Window Communication
+// For Using Strings
+// For Output File Communication
+// For Formatting Communications
 
 // PROGRAM TickerTapeCalculator:
 int main() {
+  // -- Declare Variables --
+  //  An output stream object will be needed for
+  //  The user must establish the filename
+  //  The user must define the accuracy of information recorded to the output
+  //  The user must input an operation based on a limited set of characters
+  //  The user must input a numerical value to be used in a calculation
+  //  A total must be updated by each calculation
 
-//  Introduce Program to user
-cout << " --- Ticker Tape Calculator --- " << endl;
-cout << " Enter operator and operand to " << endl;
-cout << " run and record calculations.  " << endl << endl;
-//  Ask user for filename for ticker tape
-//  Specify accuracy for output
-//  Establish output file stream
-//  WHILE 1
-//  Ask user for intended operation (+,-,*,/,=,e)
-//  IF operation is = or e
-//  Print total to ticker tape
-//  reset total
-//  IF operation is e
-//  end forever loop
-//  ENDIF
-//      ELSE
-//  ask user for numerical input
-//  Print operation and numerical input to ticker tape
-//  CASE operation
-//  CASE +,-,*,/
-//  Calculate update to total based on operator and input
-//  Print mathematical operation and updated total to console
-//  CASE default
-//    Print warning to console and ticker tape
-//      ENDCASE
-//  ENDIF
-//      ENDWHILE
-//  Check the output file was created
+  // -- Main Program --
+  //  Introduce Program to user
+  cout << " --- Ticker Tape Calculator --- " << endl;
+  cout << " Enter operator and operand to " << endl;
+  cout << " run and record calculations.  " << endl << endl;
+  //  Ask user for filename for ticker tape
+  //  Specify accuracy for output
+  //  Establish output file stream
+  //  WHILE 1
+  //  Ask user for intended operation (+,-,*,/,=,e)
+  //  IF operation is = or e
+  //  Print total to ticker tape
+  //  reset total
+  //  IF operation is e
+  //  end forever loop
+  //  ENDIF
+  //      ELSE
+  //  ask user for numerical input
+  //  Print operation and numerical input to ticker tape
+  //  CASE operation
+  //  CASE +,-,*,/
+  //  Calculate update to total based on operator and input
+  //  Print mathematical operation and updated total to console
+  //  CASE default
+  //    Print warning to console and ticker tape
+  //      ENDCASE
+  //  ENDIF
+  //      ENDWHILE
+  //  Check the output file was created
 
-} //ENDPROGRAM
+} // ENDPROGRAM
