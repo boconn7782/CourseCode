@@ -1,0 +1,43 @@
+/* C++ Lab #2 - Lesson Part 1
+ * Ticker Tape Calculator
+ * < First Initial>.<Last Name> <Date>
+ * Takes a user input of a operator and operand
+ * and runs the calculation then writes it to
+ * the console and records it in a file.
+ */
+
+#include <iostream>
+
+// PROGRAM TickerTapeCalculator:
+int main() {
+
+//  Introduce Program to user
+cout << " --- Ticker Tape Calculator --- " << endl;
+cout << " Enter operator and operand to " << endl;
+cout << " run and record calculations.  " << endl << endl;
+//  Ask user for filename for ticker tape
+//  Specify accuracy for output
+//  Establish output file stream
+//  WHILE 1
+//  Ask user for intended operation (+,-,*,/,=,e)
+//  IF operation is = or e
+//  Print total to ticker tape
+//  reset total
+//  IF operation is e
+//  end forever loop
+//  ENDIF
+//      ELSE
+//  ask user for numerical input
+//  Print operation and numerical input to ticker tape
+//  CASE operation
+//  CASE +,-,*,/
+//  Calculate update to total based on operator and input
+//  Print mathematical operation and updated total to console
+//  CASE default
+//    Print warning to console and ticker tape
+//      ENDCASE
+//  ENDIF
+//      ENDWHILE
+//  Check the output file was created
+
+} //ENDPROGRAM
