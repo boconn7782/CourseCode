@@ -39,11 +39,11 @@ int main() {
   //  end forever loop
   //  ENDIF
   //      ELSE
-  //  ask user for numerical input
-  //  Print operation and numerical input to ticker tape
+  //  ask user for operand
+  //  Print operation and operand to ticker tape
   //  CASE operation
   //  CASE +,-,*,/
-  //  Calculate update to total based on operator and input
+  //  Calculate update to total based on operator and operand
   //  Print mathematical operation and updated total to console
   //  CASE default
   //    Print warning to console and ticker tape
