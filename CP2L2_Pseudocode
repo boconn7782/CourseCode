@@ -10,11 +10,18 @@
 #include <fstream> // Needed to read or write files on disk
 using namespace std;
 
+// PROGRAM CharacterSorter
 int main() {
   // -- Declare Variables --
   // An input stream object for the text file data
+  
   // An oversized array for the text characters
+
+
   // Keep track of number of characters
+
+
+
 
   // -- Main Program --
   //  Introduce Program to user
@@ -23,23 +30,51 @@ int main() {
   cout << " sorts its characters by ASCII value.  " << endl << endl;
 
   // Open text file as an input stream
+  
+
 
   // Check the file stream
-  // IF file stream not valid
+  if (      ) {
     // Provide user warning
+    cout << "Warning...";
     // end program with error
-  // ENDIF
-
-  // Stream file content into an array
-  // FOR each element in array
-  // load character from file stream into array element
-  // Print array element to console
-  // ENDFOR
+              ;
+  }
+  
+  // FOR each element in the array
+  for (int i=0; i<      ; i++) {
+    
+   
+    // load character from file stream into array element
+    ThatFile >>     ;
+    // Print array element to console
+    cout <<     ;
+    
+  }
+  cout << endl;
 
   // Sort array data using a common sorting method
+  // Use Bubblesort
+  // FOR j from 0 to     
+  for (int j = 0;      ; j++) {
+    // Last j elements are already in place so
+    // FOR k from      
+    for (int k = 0;       ; k++) {
+      // If element is greater than the next
+      if (            ) {
+        // Switch their positions
+        char temp =    ;
+                       ;
+                       ;
+      } // ENDIF
+    } // ENDFOR
+  } // ENDFOR
 
   // Print sorted array
-  // FOR each element in array
-  // Print array element to console
-  // ENDFOR
+  // For each used element in the array (from 0 to n)
+  for (int i=0;    ; i++) {
+    // Print array element to console
+    cout <<     ;
+  } // ENDFOR
 } // ENDPROGRAM
+
