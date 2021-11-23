@@ -1,0 +1,75 @@
+/* C++ Lab #3 - Lesson Part 1
+ * Keystroke Sorter w/ functions
+ * < First Initial>.<Last Name> <Date>
+ * Made from CP2L2 and being updated to use functions
+ * Takes in a text file and loads its contents
+ * into an array then sorts the array by ASCII value.
+ */
+
+// -- Libraries & Directives --
+#include <iostream> // Needed for normal cin & cout
+#include <fstream> // Needed to read or write files on disk
+using namespace std;
+
+int main() {
+  // -- Declare Variables --
+  // An input stream object for the text file data
+  ifstream textFile;
+  // An oversized array for the text characters
+  int x = 100;
+  char A[x];
+  // Keep track of number of characters
+  int n=0;
+
+  // -- Main Program --
+  //  Introduce Program to user
+  cout << "  --- Character Sorter ---  " << endl;
+  cout << " Loads a text file and then sorts " << endl;
+  cout << " sorts its characters by ASCII value.  " << endl << endl;
+
+  // Open text file as an input stream
+  textFile.open("CP2L2.txt");
+
+// Check the file stream
+  if (!textFile) {
+    // Provide user warning
+    cout << "Warning! File not available";
+    // end program with error
+    return (1);
+  }
+  // FOR each element in the array
+  for (int i=0; i<x; i++) {
+    if (textFile.eof()) break;
+    // load character from file stream into array element
+    textFile >> A[i];
+    // Print array element to console
+    cout << A[i];
+    n++;
+  }
+  
+  cout << endl;
+  // Sort array data using a common sorting method, Use Bubblesort
+  // FOR j from 0 to
+  for (int j = 0; j < n-1; j++) {
+    // Last j elements are already in place so
+    // FOR k from
+    for (int k = 0; k < (n-j-1); k++) {
+      // If element is greater than the next
+      if ( A[k]>A[k+1]) {
+        // Switch their positions
+        char temp = A[k];
+        A[k] = A[k+1];
+        A[k+1] = temp;
+      } // ENDIF
+    } // ENDFOR
+  } // ENDFOR
+
+  // Print sorted array
+//    cout << A[n];
+  // For each used element in the array (from 0 to n)
+  for (int i=0; i<n; i++) {
+    // Print array element to console
+    cout << A[i];
+  } // ENDFOR
+  textFile.close();
+} // ENDPROGRAM
