@@ -1,0 +1,27 @@
+% MATLAB Lab #1 Homework Part 1
+% <First Initial>.<Last Name>
+% <Date of creation>
+% NU: Fall Enrollment Statistics
+% Calculates and displays Fall Enrollment
+% stats from 2016 to 2021
+
+clear;
+close;
+clc;
+
+% Load total values for Fall Enrollment Statistics
+Years = [ 2021, 2020, 2019, 2018, 2017, 2016, 2021 ];
+Applicants =[75244, 64459, 62263, 62272, 54209, 51063, 75244];
+Admits = [13829, 13199, 11240, 12042, 14876, 14747, 13829];
+FYs = [4504, 3128, 2996, 2746, 3108, 2676, 4504 ];
+
+% Calculate Percent based on total applicants
+PerAdmit = Admits./Applicants*100;
+PerAttend = FYs/Applicants*100;
+
+% Plot to show year to year trend
+plot(Years, PerAdmit, Years, PerAttend);
+xticks([2016:2021]);
+ylabel('Percent (%)');
+title(Northeastern University: Fall Enrollment Statistics);
+legend('Percent Enrolled','Percent Admitted');
