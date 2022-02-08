@@ -4,9 +4,7 @@
 % <Name of program>
 % <Description of program>
 
-clear;  % Clears the command window
-clc;    % Clears the workspace
-close;  % Closes any figures
+< Add the housekeeping code >
 
 % Provide user info. and instruction
 disp(' - - - Grade Converter - - - ');
