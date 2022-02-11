@@ -10,7 +10,7 @@ close; % Closes any figures
 
 %% Imports some compression data
 B = load('BridgeData.txt');
-plot(B(:,1),B(:,2)
+plot(B(:,1),B(:,2))
 
 %% eliminate extraneous noise
 [R,C] = size(B);
