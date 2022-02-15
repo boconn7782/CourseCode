@@ -1,0 +1,80 @@
+% MATLAB Lab #1 Part 2
+% B.O'Connell
+% 2021-09-15
+% Weather Plotter
+% Plots the average temperature and 
+% wind chill factor from Mt. Washington for
+% a inputted date and following number of days
+
+close; clc; clear;
+
+% Load temperatuature and Wind Velocity
+
+
+% Introduction telling the user what the script does and what to do
+disp("---- Weather Plotter ----" );
+disp("Plots the average temperature" );
+disp("and wind chill factor from " );
+disp("Mt. Washington based on your" );
+disp("Inputs: Date and # of days" );
+% ----- NEEDS UPDATING ------ 
+
+
+
+% User inputs for the date and number of days of data
+D = input('Enter a date: ','s');
+N = input('Enter number of days: ');
+
+
+
+
+% Connect with GHCN and download raw data
+% Prepare and format all information as required to use
+% the GHCN (Global Historical Climatology Network)
+% https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt
+dataset =  'daily-summaries';
+station = 'USW00014755'; % Mt. Washington station ID
+% For more information on this weather station:
+% https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00014755/detail
+startDate = char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd'));
+endDate =   char(datetime(D,'InputFormat','yyyy-MM-dd','Format','y-MM-dd')+(N-1));
+dataTypes = 'TMAX,TMIN,AWND';
+format =    'csv'; 
+base = 'https://www.ncei.noaa.gov/access/services/data/v1?dataset=';
+call = strcat(base,dataset,'&dataTypes=',dataTypes,...
+    '&stations=',station,'&startDate=',startDate,...
+    '&endDate=',endDate,'&format=',format);
+% Make a request of the GHCN and store the returned data
+Data = webread(call);
+
+
+
+
+% Break out the data needed: 
+% Dates(DT), wind speeds(WD), low temperatures(LT), and high temperatures(HT)
+DT = Data.('DATE'); 
+% Wind provided in 10ths of meters per second
+WD = (Data.('AWND')*.1)*(1000/(60*60)); % Converted to kph
+% Temperature provided 10ths of degrees C
+LT = (Data.('TMIN')*.1); % Converted to deg C
+HT = (Data.('TMAX')*.1); % Converted to deg C
+
+
+
+
+% Calculate Daily Avg. Temp and WCF
+AT = (HT + LT)/2;
+
+% Calculate Wind Chill Factor
+WCF=35.74 + 0.6215.*AT - 35.75.*WD.^0.16 + 0.4275.*AT.*WD.^0.16;
+
+% Plot Temperatures and wind chill factor over days
+
+plot(DT,AT,'b-.o',DT,WCF,'r--d')
+
+% Update figure with title and labels
+legend('Average Temperatures','Wind Chill Factors');
+xlabel('Day');
+ylabel('Temperature(°F)');
+title('Temperatures and Wind Chill Factors Mt. Washington for December 2018');
+
