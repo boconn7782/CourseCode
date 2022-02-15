@@ -76,5 +76,5 @@ plot(DT,AT,'b-.o',DT,WCF,'r--d')
 legend('Average Temperatures','Wind Chill Factors');
 xlabel('Day');
 ylabel('Temperature(°F)');
-title('Temperatures and Wind Chill Factors Mt. Washington for December 2018');
+title('Temperatures and Wind Chill Factors Mt. Washington');
 
