@@ -1,7 +1,8 @@
 /*
   Blink - Button
   
-  Switching a LED on and off every second or when the button is pressed.
+  1 LED should switch on and off every second. 
+  The other LED should be on when the button is pushed. 
   
 */
 
@@ -23,7 +24,6 @@ void setup() {
 }
 
 void loop() {             
-  /* This example is purposely commented out
   // The Blink Example
   // switching on the led 
   digitalWrite(led1Pin, HIGH);
@@ -32,7 +32,7 @@ void loop() {
   // switching off the led 
   digitalWrite(led1Pin, LOW);
   // stopping the program for 1000 milliseconds
-  delay(1000); */
+  delay(1000);
 
   // The Button Example
   // check if the pushbutton is pressed.
