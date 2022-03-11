@@ -10,9 +10,9 @@ BLINK TAB:
             BR = app.BPS.Value; % Blink rate value from the numeric field
             tic % Start timer
             while toc < 30
-                app.RBrd.writeDigitalPin('D13',1); % Set Pin 3 High
+                app.RBrd.writeDigitalPin('D3',1); % Set Pin 3 High
                 pause(1/BR); % Pause based on Blink Rate
-                app.RBrd.writeDigitalPin('D13',0); % Set Pin 3 Low
+                app.RBrd.writeDigitalPin('D3',0); % Set Pin 3 Low
                 pause(1/BR);
             end
             
