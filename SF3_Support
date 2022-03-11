@@ -1,0 +1,67 @@
+Here are the different code snippets you will need for the MATLAB/Arduino Integration:
+
+BLINK TAB: 
+            % State buttons function like a switch
+            % The can be on or off and that state has a Value
+            value = app.StrtStp.Value; % Check the state Value
+            % When engaged, its Value is 1
+            
+            % Blink LED at a given rate for 30 seconds
+            BR = app.BPS.Value; % Blink rate value from the numeric field
+            tic % Start timer
+            while toc < 30
+                app.RBrd.writeDigitalPin('D13',1); % Set Pin 3 High
+                pause(1/BR); % Pause based on Blink Rate
+                app.RBrd.writeDigitalPin('D13',0); % Set Pin 3 Low
+                pause(1/BR);
+            end
+            
+           
+LIGHT TAB: 
+            % Turn on the RedBoard LED to let you know its working
+            app.RBrd.writeDigitalPin('D13',1);
+            % Change the button color and text
+            app.LButton.BackgroundColor = 'r';
+            app.LButton.Text = 'Recording Data';
+            
+            tic % Start the Timer
+            for i = 1:45
+                % Read current voltage value
+                y(i) = app.RBrd.readVoltage('A0');
+                t(i) = toc; % Get the current time
+                plot(app.LightGraph, t,y,'p');
+                drawnow % This will update the plot in real time
+                pause(.1); % Slow down the data collection for observation
+            end
+            % Turn off the RedBoard LED
+            app.RBrd.writeDigitalPin('D13',0);
+            % Let User know data collection is complete
+            app.LButton.BackgroundColor = 'g';
+            app.LButton.Text = 'Data is Complete';
+            pause(1);
+            % Reset the button attributes
+            app.LButton.Text = 'Push to Start';
+            app.LButton.BackgroundColor = [0.96 0.96 0.96];
+            
+            
+            
+Volts Tab:
+            MaxTime = 30; % Set the Max Time
+            % Set the X and Y Limits of the Graph
+            app.VGraph.XLim = [0 MaxTime];
+            app.VGraph.YLim = [0 5];
+            l = 1;
+            tic; % Start Clock
+            while toc < MaxTime
+                % Grab voltage reading from potentiometer
+                v(l) = app.RBrd.readVoltage('A2');
+                % Grab current time
+                T(l) = toc;
+                % Plot voltage vs time
+                plot(app.VGraph,T,V,'o');
+                % Update Voltage readout
+                app.VLabel.Text = strcat('Voltage = ',num2str(v(l)));
+                drawnow;
+                pause(.25); % Slow down data collection for viewing
+                l = l+1;
+            end   
