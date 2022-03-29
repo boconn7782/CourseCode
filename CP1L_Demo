@@ -1,0 +1,15 @@
+Fill in the blanks for the following code:
+#include ***  // to use input & output
+#include ***   // to use fixed, set precision
+using *** ;  // to use standard c++ functions
+int main () // alternative: int main (void)
+{ // don't forget starting bracket
+    *** foot, inch;   // declare vars: decimal!
+    *** << "Enter length: ";  // display a user prompt
+    cin >> foot;  // get input from user
+    inch = 12* foot;  // calculate the conversion
+    // decimal numbers to 2 places
+    cout<<fixed<< ***; 
+    // display results
+    cout<< foot << " ft = " << inch << " in" << *** ;
+}  // don't forget ending bracket
