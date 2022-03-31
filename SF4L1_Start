@@ -1,0 +1,55 @@
+/*
+  Blink - Button
+  
+  1 LED should switch on and off every second. 
+  The other LED should be on when the button is pushed. 
+  
+*/
+
+// constants that won't change:
+// set pin numbers:
+const int buttonPin = 2;  // the number of the pushbutton pin
+const int led1Pin =  13;  // the number of the LED pin
+const int led2Pin =  12;  // the number of the LED pin
+
+// variables that will change:
+int buttonState = 0;      // variable for reading the pushbutton status
+
+void setup() {                  
+  // initialize the LED pins as a digital outputs:
+  pinMode(led1Pin, OUTPUT);
+  pinMode(led2Pin, OUTPUT);   
+  // initialize the pushbutton pin as a digital input:
+  pinMode(buttonPin, INPUT); 
+}
+
+void loop() {   
+
+  // Code from the Blink Example
+  // switching on the led 
+  digitalWrite(led1Pin, HIGH);
+  // stopping the program for 1000 milliseconds
+  delay(1000);
+  // switching off the led 
+  digitalWrite(led1Pin, LOW);
+  // stopping the program for 1000 milliseconds
+  delay(1000);
+  // End of the Blink Example
+
+
+
+  // Code from the Button Example
+  // check if the pushbutton is pressed.
+  buttonState = digitalRead(buttonPin);
+  // if it is, the buttonState is LOW:
+  if (buttonState == LOW) {     
+    // turn LED on:    
+    digitalWrite(led2Pin, HIGH);  
+  } 
+  else {
+    // turn LED off:
+    digitalWrite(led2Pin, LOW); 
+  }
+  // End of the Button Example
+  
+}
