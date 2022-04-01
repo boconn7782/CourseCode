@@ -3,7 +3,7 @@
 #include... // Load the necessary libraries
 using namespacestd; // To simplify code
 // Declare Variables
-double pi=3.14159;
+double pi=3.1415926535898;
 double r, c, a; // radius, circumference, area
 string ans("Yes");
 // Main Program
