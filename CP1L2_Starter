@@ -1,0 +1,21 @@
+/* Title Block */
+// Libraries & Directives
+#include... // Load the necessary libraries
+using namespacestd; // To simplify code
+// Declare Variables
+double pi=3.14159;
+double r, c, a; // radius, circumference, area
+string ans("Yes");
+// Main Program
+int main()
+{
+// Introduce and explain the program for the user
+cout << ...
+do{
+// Ask user for a radius value
+// Calculate the Circumference - 2*pi*r
+// Calculate the Area - pi*r^2
+// Output the values using a set precision and scientific notation
+// Ask user if they would like to calculate again
+cout << "Would you like to make another calculation?" << endl;    cout << "Enter 'Yes' or 'No'";    cin >> ans;  }while(ans!="No");
+}
