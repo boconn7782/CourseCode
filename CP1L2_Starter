@@ -1,7 +1,7 @@
 /* Title Block */
 // Libraries & Directives
 #include... // Load the necessary libraries
-using namespacestd; // To simplify code
+using namespace std; // To simplify code
 // Declare Variables
 double pi=3.1415926535898;
 double r, c, a; // radius, circumference, area
