@@ -17,5 +17,8 @@ do{
 // Calculate the Area - pi*r^2
 // Output the values using a set precision and scientific notation
 // Ask user if they would like to calculate again
-cout << "Would you like to make another calculation?" << endl;    cout << "Enter 'Yes' or 'No'";    cin >> ans;  }while(ans!="No");
+cout << "Would you like to make another calculation?" << endl;
+cout << "Enter 'Yes' or 'No'";
+cin >> ans;
+}while(ans!="No");
 }
