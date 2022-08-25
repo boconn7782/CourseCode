@@ -37,4 +37,7 @@ for s = 1:X
     pause(i);
     A.writeDigitalPin('D13',0);
     pause(i);
+    display("Blinked");
 end
+
+display("Program Complete");
