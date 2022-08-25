@@ -18,8 +18,9 @@ Port = L(end)
 % component is last on that list, 
 % which is probably your Redboard
 
-% You can change this value to see what it does
+% You can change these value to see what they do
 X = 10;
+S = .5;
 
 % Connect to the Arduino
 A = arduino(Port,'Uno')
@@ -30,9 +31,9 @@ A = arduino(Port,'Uno')
 % You should still submit your script
 
 
-% Blink Pin 13 X times increasing in rate
-for s = 1:X
-    i=(1/(2*s));
+% Blink Pin 13 multiple times increasing in rate
+for t = 1:X
+    i=(S*t));
     A.writeDigitalPin('D13',1);
     pause(i);
     A.writeDigitalPin('D13',0);
@@ -41,3 +42,4 @@ for s = 1:X
 end
 
 disp("Program Complete");
+
