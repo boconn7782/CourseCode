@@ -1,0 +1,40 @@
+% MATLAB Lab #<Lab #> <Homework or Lesson> Part <Part # of the Lab>
+% <First Initial>.<Last Name>
+% <Date of creation>
+% <Name of Script>
+% <Description of what the program will do> 
+
+clear all; % clears all variables from the Workspace
+close all; % closes all open figures
+clc; % clears the history of commands entered in the Command Window
+
+% Gets a list of connected ports and 
+% saves it to L
+L = serialportlist;
+
+% Save the last item on that list 
+Port = L(end)
+% Typically the most recently connected
+% component is last on that list, 
+% which is probably your Redboard
+
+% You can change this value to see what it does
+X = 10;
+
+% Connect to the Arduino
+A = arduino(Port,'Uno')
+% This will take a few minute the 
+% first time it connects to your Arduino.
+% If you don't have a board connected, 
+% you'll get an error which is fine. 
+% You should still submit your script
+
+
+% Blink Pin 13 X times increasing in rate
+for s = 1:X
+    i=(1/(2*s));
+    A.writeDigitalPin('D13',1);
+    pause(i);
+    A.writeDigitalPin('D13',0);
+    pause(i);
+end
