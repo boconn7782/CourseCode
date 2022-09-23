@@ -3,9 +3,10 @@ classdef UVsensor < handle
     % Prof. O'Connell's Cornerstone of Engineering course.
     % This is part of a suite of technologies and associated
     % curriculum developed as part of a Northeastern University
-    % 2021 MATLAB Curriculum Grant. The sensor is a SparkFun XXXXXX
-    % and returns the level of UVA and UVB radiation and
-    % a calculated UV index.
+    % 2021 MATLAB Curriculum Grant. The sensor is the SparkFun Qwiic UV
+    % Sensor with a Vishay VEML6075 UVA and UVB sensor chip onboard. 
+    % It detects the UVA and UVB radiation intensity and returns a level
+    % for each as well as a calculated UV index.
     %
     % A = UVsensor(P,E) creates an object A that reads the sensor data
     % from the UV sensor module.
