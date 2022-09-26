@@ -95,7 +95,7 @@ classdef UVsensor < handle
         function obj = UVlocation(obj,m,n)
             % Establishes the sensor location via MATLAB mobile or manual entry
             %
-            % UVLocation will record the latitude and longitude associated
+            % UVlocation will record the latitude and longitude associated
             % with the object based on either using the sensor in your
             % cellphone when MATLAB mobile position data is enabled or
             % through manual entry.
@@ -103,7 +103,7 @@ classdef UVsensor < handle
             % m = mobiledev will connect to your mobile device if connected
             % to your MATLAB account and position data is turned on in the
             % settings of your MATLAB mobile app.
-            % A.UVLocation(m) will then automatically connect to your
+            % A.UVlocation(m) will then automatically connect to your
             % MATLAB mobile object (m) and record the latitude and
             % longitude values, assigning them to the associated
             % properties in the UV sensor object (A)
