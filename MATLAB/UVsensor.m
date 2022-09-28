@@ -117,7 +117,7 @@ classdef UVsensor < handle
 
             if nargin == 3
                 % if 3 are given, then it's manual entry of the location
-                display("Manual location input");
+                disp("Manual location input");
                 obj.Latitude=m;
                 obj.Longitude=n;
             else
@@ -260,11 +260,13 @@ classdef UVsensor < handle
 
             % Show datapoint that is going to be collected
             disp(DP);
-            C = input("Accept datapoint? Y or N");
-            if C == 'Y'
+            C = input("Accept datapoint? Y or N","s");
+            if strcmp(C,"Y")
                 obj.datapoint = DP;
+                disp("Datapoint saved.");
             else
                 obj.datapoint = [];
+                disp("Datapoint not saved.");
             end
         end
 
