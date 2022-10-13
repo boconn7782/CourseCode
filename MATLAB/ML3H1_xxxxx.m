@@ -21,7 +21,7 @@ A.HRexpsettings(0,'r'); % default to no noise for now. Enter your dominant hand.
 A.HRrun();
 
 % Accept the datapoint
-A.HRdatapoint('Y');
+A.HRdatapoint();
 
 % Upload the datapoint
 A.HRupload();
