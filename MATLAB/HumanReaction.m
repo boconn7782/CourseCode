@@ -516,6 +516,11 @@ classdef HumanReaction < handle
          % Runs a demo the uses the Human Reaction data
          function HRDemo()
              % In development...
+             rawdata = HumanReaction.HRdata;
+             RecTs = table2array(rawdata(:,"ReacTime"));
+             MovTs = table2array(rawdata(:,"MoveTime"));
+             RetTs = table2array(rawdata(:,"RetTime"));
+             plot(RecTs,MovTs,'o',RecTs,RetTs,'.');
          end
     end
 
