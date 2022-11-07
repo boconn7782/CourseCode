@@ -31,25 +31,25 @@ int main() {
   //  Specify accuracy for output
   //  Establish output file stream
   //  WHILE 1
-  //  Ask user for intended operation (+,-,*,/,=,e)
-  //  IF operation is = or e
-  //  Print total to ticker tape
-  //  reset total
-  //  IF operation is e
-  //  end forever loop
-  //  ENDIF
-  //      ELSE
-  //  ask user for operand
-  //  Print operation and operand to ticker tape
-  //  SWITCH operation
-  //  CASE +,-,*,/
-  //  Calculate update to total based on operator and operand
-  //  Print mathematical operation and updated total to console
-  //  CASE default
-  //    Print warning to console and ticker tape
+  //    Ask user for intended operation (+,-,*,/,=,e)
+  //    IF operation is = or e
+  //      Print total to ticker tape
+  //      reset total
+  //      IF operation is e
+  //        end forever loop
+  //      ENDIF
+  //    ELSE
+  //      ask user for operand
+  //      Print operation and operand to ticker tape
+  //      SWITCH operation
+  //      CASE +,-,*,/
+  //        Calculate update to total based on operator and operand
+  //        Print mathematical operation and updated total to console
+  //      CASE default
+  //        Print warning to console and ticker tape
   //      ENDCASE
-  //  ENDIF
-  //      ENDWHILE
+  //    ENDIF
+  //  ENDWHILE
   //  Check the output file was created
 
 } // ENDPROGRAM
