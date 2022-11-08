@@ -39,7 +39,6 @@ int main() {
   //        end forever loop
   //      ENDIF
   //    ELSE
-  //      ask user for operand
   //      Print operation and operand to ticker tape
   //      SWITCH operation
   //      CASE +,-,*,/
