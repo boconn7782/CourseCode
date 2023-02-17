@@ -1,0 +1,25 @@
+PROGRAM ML3H1:
+Ask user for the gameboard size
+Build the game board using MFGenerator
+WHILE bomb not found
+  Ask user to guess a row and a column value
+  IF the row guessed is above the maximum number of rows
+      Set row used to the maximum value of rows
+      Inform user that the program will use the maximum value of rows instead of their guess
+  ELSE
+      Use the row guessed
+  ENDIF
+  IF the column guessed is above the maximum number of columns
+      Set column used to the maximum value of columns
+      Inform user that the program will use the maximum value of columns instead of their guess
+  ELSE
+      Use the column guessed
+  ENDIF
+  IF bomb status IS true
+    Bomb found
+  ELSE
+    Bomb not found
+  ENDIF
+ENDWHILE
+Inform user that the bomb is found and game is over
+END
