@@ -24,6 +24,7 @@ void setup() {
 }
 
 void loop() {   
+  /* The Blink example portion is purposely commented out
 
   // Code from the Blink Example
   // switching on the led 
@@ -35,6 +36,8 @@ void loop() {
   // stopping the program for 1000 milliseconds
   delay(1000);
   // End of the Blink Example
+  
+  */
 
 
 
