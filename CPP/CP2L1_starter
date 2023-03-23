@@ -1,4 +1,4 @@
-/* C++ Lab #2 - Lesson Part 2
+/* C++ Lab #2 - Lesson Part 1
  * Character Sorter
  * < First Initial>.<Last Name> <Date>
  * Takes in a text file and loads its contents
@@ -17,10 +17,7 @@ int main() {
   
   // An oversized array for the text characters
 
-
   // Keep track of number of characters
-
-
 
 
   // -- Main Program --
@@ -31,7 +28,6 @@ int main() {
 
   // Open text file as an input stream
   
-
 
   // Check the file stream
   if (      ) {
