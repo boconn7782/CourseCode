@@ -39,7 +39,9 @@ int main() {
   }
   // FOR each element in the array
   for (int i=0; i<x; i++) {
-    if (textFile.eof()) break;
+    if (textFile.eof()) {
+      break;
+    }
     // load character from file stream into array element
     textFile >> A[i];
     // Print array element to console
