@@ -26,9 +26,9 @@ void setup() {
   // Setup GrnBtn pin as INPUT, ​for component Green Button;​
   // Setup BluBtn pin as INPUT, ​for component Blue Button;​
 
-  // Setup RedLED pin as INPUT, ​for component RGB LED - Red;​
-  // Setup GrnLED pin as INPUT, ​for component RGB LED - Green;​
-  // Setup BluLED pin as INPUT, ​for component RGB LED - Blue;
+  // Setup RedLED pin as OUTPUT, ​for component RGB LED - Red;​
+  // Setup GrnLED pin as OUTPUT, ​for component RGB LED - Green;​
+  // Setup BluLED pin as OUTPUT, ​for component RGB LED - Blue;
 }
 
 // WHILE 1
