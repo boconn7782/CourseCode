@@ -1,0 +1,108 @@
+Just the Pseudocode:
+
+SENSE - 
+Read the analog in value
+THINK - 
+IF analog in value < 1/3 signal range
+    Map LED1 output level from min to 1/3 of signal range
+     to the range of the analog out;
+    Set LED2 output level to 0;
+    Set LED3 output level to 0;
+ELSE IF analog in value between 1/3 and 2/3 signal range
+    Set LED1 output level to full;
+    Map LED2 output level from 1/3 to 2/3 of signal range
+    to the range of the analog out;
+    Set LED3 output levels to 0;
+ELSE IF Analog in value > 2/3 signal range
+    Set LED1 output level to full;
+    Set LED2 output level to full;
+    Map LED3 output level from 2/3 to max of signal range
+    to the range of the analog out;
+ENDIF
+ACT - 
+Write the LED Output values for LED1, LED2, & LED3 to the new levels
+CHECK - 
+Print the results to serial monitor:
+ signal level, LED1 Output level,
+ LED2 Output Level, & LED3 Output level
+
+
+
+Starter code with integrated pseudocode:
+
+
+const int analogInPin = A0;  // Analog input pin that the potentiometer is attached to
+const int analogOutPin = 9;  // Analog output pin that the LED is attached to
+int sensorValue = 0;  // value read from the pot
+int outputValue = 0;  // value output to the PWM (analog out)
+
+void setup() {
+// initialize serial communications at 9600 bps:
+Serial.begin(9600);
+}
+
+void loop() {
+// OLD FROM THE EXAMPLE - (You'll end up deleting, replacing, or changing the old)
+// read the analog in value:
+sensorValue = analogRead(analogInPin);
+
+// NEW FROM THE PSEUDOCODE - 
+// SENSE - 
+// Read the analog in value
+
+
+
+// OLD FROM THE EXAMPLE -
+// map it to the range of the analog out:
+outputValue = map(sensorValue, 0, 1023, 0, 255);
+
+// NEW FROM THE PSEUDOCODE - 
+THINK - 
+IF analog in value < 1/3 signal range
+    Map LED1 output level from min to 1/3 of signal range
+     to the range of the analog out;
+    Set LED2 output level to 0;
+    Set LED3 output level to 0;
+ELSE IF analog in value between 1/3 and 2/3 signal range
+    Set LED1 output level to full;
+    Map LED2 output level from 1/3 to 2/3 of signal range
+    to the range of the analog out;
+    Set LED3 output levels to 0;
+ELSE IF Analog in value > 2/3 signal range
+    Set LED1 output level to full;
+    Set LED2 output level to full;
+    Map LED3 output level from 2/3 to max of signal range
+    to the range of the analog out;
+ENDIF
+
+
+
+// OLD FROM THE EXAMPLE - 
+// change the analog out value:
+analogWrite(analogOutPin, outputValue);
+
+// NEW FROM THE PSEUDOCODE - 
+ACT - 
+Write the LED Output values for LED1, LED2, & LED3 to the new levels
+
+
+
+// OLD FROM THE EXAMPLE - 
+// print the results to the Serial Monitor:
+Serial.print("sensor = ");
+Serial.print(sensorValue);
+Serial.print("\t output = ");
+Serial.println(outputValue);
+
+// NEW FROM THE PSEUDOCODE - 
+CHECK - 
+Print the results to serial monitor:
+ signal level, LED1 Output level,
+ LED2 Output Level, & LED3 Output level
+
+
+
+// wait 2 milliseconds before the next loop for the analog-to-digital
+// converter to settle after the last reading:
+delay(2);
+}
