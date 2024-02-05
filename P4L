@@ -28,7 +28,7 @@ Print the results to serial monitor:
 
 
 
-Starter code with integrated pseudocode:
+Example code with integrated pseudocode:
 
 
 const int analogInPin = A0;  // Analog input pin that the potentiometer is attached to
