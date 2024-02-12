@@ -1,4 +1,4 @@
-% MATLAB Lab #1 Homework Part 1 Support
+% Programming Lab 5 Homework 1 Support
 % B.O'Connell
 % 2021-09-15
 % Weather Downloader 
