@@ -67,7 +67,6 @@ HT = (Data.('TMAX')*.1); % Converted to deg C
 
 % plot data (poorly)
 plot(DT, WD, DT, LT, DT, HT);
-legend('Winds','Low','High');
 
 
 
