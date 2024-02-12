@@ -1,9 +1,13 @@
-% MATLAB Lab #1 - In Class Debugging Excercise
+% Programming 6 Pre-Lab Lesson 1
 % <First Initial>.<Last Name>
 % <Date of creation>
-% NU: Fall Enrollment Statistics
+% NU: Fall Enrollment Statistics - Debugging Excercise
 % Calculates and displays Fall Enrollment
 % stats from 2016 to 2021
+
+% You must identify and fix the 5 errors in this script that keep it from running as described. 
+% Not all of these are errors that will keep the script from running. 
+% Identify the errors and fix them. Include comments describing the errors. 
 
 clear;
 close;
