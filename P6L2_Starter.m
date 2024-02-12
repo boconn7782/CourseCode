@@ -1,4 +1,4 @@
-% MATLAB Lab #2 Part 1
+% P
 % <first Initial>.<Last Name>
 % <Date of creation>
 % <Name of program>
