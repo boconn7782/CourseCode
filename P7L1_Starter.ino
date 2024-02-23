@@ -11,7 +11,7 @@
 
 const int ledPin = 11; 
 int dataIn; // For holding the usable data from the message
-char SerData; // Need to make sure there's enough space for our message
+ // For holding the most recent character from the buffer=
 
 
 
