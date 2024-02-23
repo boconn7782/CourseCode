@@ -18,7 +18,7 @@ char SerData; // Need to make sure there's enough space for our message
 void setup() {
   // Initialize serial communication
 
-  // Set Serial Time Out to 200
+  // Adjust Serial Time Out
 
   // By default, some serial commands will take up to a second to run if waiting for data. 
   // We're speeding up the response time so our Arduino isn't delayed by this.
