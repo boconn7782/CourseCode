@@ -11,7 +11,7 @@
 
 const int ledPin = 11; 
 int dataIn; // For holding the usable data from the message
- // For holding the most recent character from the buffer=
+ // For holding the most recent character from the buffer
 
 
 
