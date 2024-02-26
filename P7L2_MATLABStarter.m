@@ -53,7 +53,7 @@ while(1) % Starts an endless loop
        ;  
     % Now read the latest line written to the serial monitor
     ArdMsg =   ; 
-    % The command will wait 60 seconds before timing out so your 
+    % The command will wait 10 seconds before timing out so your 
     % Arduino has that long to send another line of data.
 
     %% IF message contains our identifier characters THEN
