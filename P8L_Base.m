@@ -7,8 +7,6 @@
 
 close; clc; clear;
 
-%% Load temperature and Wind Velocity
-
 % Introduction telling the user what the script does and what to do
 disp("---- Weather Plotter ----" );
 disp("Plots the average temperature" );
@@ -16,14 +14,14 @@ disp("and wind chill factor from " );
 disp("Mt. Washington based on your" );
 disp("Inputs: Date and # of days" );
 
+%% Ask user for Time Period
 % User inputs for the date and number of days of data
 D = input('Enter a date: ','s');
 N = input('Enter number of days: ');
 
 
 
-
-
+%% Load Temperature and Wind Velocity data
 % Connect with GHCN and download raw data
 % Prepare and format all information as required to use
 % the GHCN (Global Historical Climatology Network)
@@ -43,7 +41,6 @@ call = strcat(base,dataset,'&dataTypes=',dataTypes,...
 % Make a request of the GHCN and store the returned data
 Data = webread(call);
 
-
 % Break out the data needed: 
 % Dates(DT), wind speeds(WD), low temperatures(LT), and high temperatures(HT)
 DT = Data.('DATE'); 
@@ -55,18 +52,16 @@ HT = (Data.('TMAX')*.1); % Converted to deg C
 
 
 
-
-
-% Calculate Daily Avg. Temp and WCF
+%% Calculate daily Avg. Temp and Wind Chill Factor
+% Calculate Daily Avg. Temp
 AT = (HT + LT)/2;
 
 % Calculate Wind Chill Factor
 WCF=35.74 + 0.6215.*AT - 35.75.*WD.^0.16 + 0.4275.*AT.*WD.^0.16;
 
-% Plot Temperatures and wind chill factor over days
-
+%% Plot Temperatures and wind chill factor
+% Plot Avg Temp and WCF vs dates
 plot(DT,AT,'b-.o',DT,WCF,'r--d')
-
 % Update figure with title and labels
 legend('Average Temperatures','Wind Chill Factors');
 xlabel('Day');
