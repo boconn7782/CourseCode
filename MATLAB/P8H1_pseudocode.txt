@@ -1,4 +1,4 @@
-PROGRAM ML3H1:
+PROGRAM P8H1:
 Ask user for the gameboard size
 Build the game board using MFGenerator
 WHILE bomb not found
