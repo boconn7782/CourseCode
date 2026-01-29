@@ -1,0 +1,56 @@
+"""
+Blink - Button
+
+1 LED should switch on and off every second.
+The other LED should be on when the button is pushed.
+"""
+
+from machine import Pin
+import time
+
+# Constants that won't change:
+# Set pin numbers:
+BUTTON_PIN = 16    # GPIO pin for the pushbutton
+LED1_PIN = 15      # GPIO pin for LED 1
+LED2_PIN = 14      # GPIO pin for LED 2
+
+# Variables that will change:
+button_state = 0   # Variable for reading the pushbutton status
+
+# Setup - initialize hardware
+# Initialize the LED pins as digital outputs:
+led1 = Pin(LED1_PIN, Pin.OUT)
+led2 = Pin(LED2_PIN, Pin.OUT)
+# Initialize the pushbutton pin as a digital input:
+button = Pin(BUTTON_PIN, Pin.IN, Pin.PULL_UP)
+
+# Main loop
+while True:
+    """
+    # The Blink example portion is purposely commented out
+    
+    # Code from the Blink Example
+    # Switching on the LED
+    led1.on()
+    # Stopping the program for 1000 milliseconds
+    time.sleep(1)
+    # Switching off the LED
+    led1.off()
+    # Stopping the program for 1000 milliseconds
+    time.sleep(1)
+    # End of the Blink Example
+    """
+    
+    
+    
+    # Code from the Button Example
+    # Check if the pushbutton is pressed
+    button_state = button.value()
+    # With PULL_UP, button pressed = 0 (LOW)
+    if button_state == 0:
+        # Turn LED on
+        led2.on()
+    else:
+        # Turn LED off
+        led2.off()
+    # End of the Button Example
