@@ -188,7 +188,7 @@ print(f"The opponent sent out a {type_name(computer_type)} card: {computer_hp} H
 # print()
 
 
-# ---- TODO 8 ----
+# ---- TODO 9 ----
 # Decide the result.
 #
 # Whoever has MORE HP remaining wins the exchange. Print one of
@@ -198,7 +198,7 @@ print(f"The opponent sent out a {type_name(computer_type)} card: {computer_hp} H
 
 
 # ============================================================
-# TODO 9: Paste the output from TWO runs below, as comments.
+# TODO 10: Paste the output from TWO runs below, as comments.
 #         The two runs must show DIFFERENT opponent types.
 #         If you get the same type twice, run it again.
 # ============================================================
